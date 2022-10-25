@@ -17,6 +17,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupListener() {
-        binding.
+        binding.btnIncrement.setOnClickListener{
+            viewModel.increment()
+        }
+
+        binding.btnDecrement.setOnClickListener {
+            viewModel.decrement()
+        }
+
+        viewModel.counter.observe(this){
+            binding.tvCounter.text = it.toString()
+        }
     }
 }

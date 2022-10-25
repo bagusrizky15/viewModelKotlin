@@ -17,6 +17,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
+        android:layout_marginLeft="5dp"
         android:id="@+id/btnIncrement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,6 +26,7 @@
         app:layout_constraintTop_toBottomOf="@id/angkaPertama"/>
 
     <Button
+        android:layout_marginLeft="5dp"
         android:id="@+id/btnDecrement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,11 +35,21 @@
         app:layout_constraintTop_toBottomOf="@id/angkaPertama"/>
 
     <Button
+        android:layout_marginLeft="5dp"
         android:id="@+id/btnDivide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
         app:layout_constraintStart_toEndOf="@id/btnDecrement"
+        app:layout_constraintTop_toBottomOf="@id/angkaPertama"/>
+
+    <Button
+        android:layout_marginLeft="5dp"
+        android:id="@+id/btnMultiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        app:layout_constraintStart_toEndOf="@id/btnDivide"
         app:layout_constraintTop_toBottomOf="@id/angkaPertama"/>
 
     <EditText
@@ -48,7 +60,7 @@
         android:hint="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/btnMultiple"/>
 
     <TextView
         android:id="@+id/tvCounter"

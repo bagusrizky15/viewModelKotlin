@@ -18,11 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupListener() {
         binding.btnIncrement.setOnClickListener{
-            viewModel.increment()
-        }
-
-        binding.btnDecrement.setOnClickListener {
-            viewModel.decrement()
+            viewModel.increment(angkaPertama = binding.angkaPertama.text.toString(), angkaKedua = binding.angkaKedua.text.toString())
         }
 
         viewModel.counter.observe(this){

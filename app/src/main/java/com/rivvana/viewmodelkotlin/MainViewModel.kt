@@ -10,4 +10,8 @@ class MainViewModel: ViewModel() {
         counter.postValue(angkaPertama.toInt()+angkaKedua.toInt())
     }
 
+    fun decrement(angkaPertama: String, angkaKedua: String){
+        counter.postValue(angkaPertama.toInt()-angkaKedua.toInt())
+    }
+
 }

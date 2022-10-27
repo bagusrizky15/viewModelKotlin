@@ -18,7 +18,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupListener() {
         binding.btnIncrement.setOnClickListener{
-            viewModel.increment(angkaPertama = binding.angkaPertama.text.toString(), angkaKedua = binding.angkaKedua.text.toString())
+            val angkaPertama = binding.angkaPertama.text.toString()
+            val angkaKedua = binding.angkaKedua.text.toString()
+            viewModel.increment(angkaPertama,angkaKedua)
+        }
+
+        binding.btnDecrement.setOnClickListener {
+            val angkaPertama = binding.angkaPertama.text.toString()
+            val angkaKedua = binding.angkaKedua.text.toString()
+            viewModel.decrement(angkaPertama,angkaKedua)
         }
 
         viewModel.counter.observe(this){
